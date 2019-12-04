@@ -1,0 +1,81 @@
+/*
+  Running MySource Matrix
+  Developed by Squiz - http://www.squiz.net
+  MySource, MySource Matrix and Squiz.net are registered Trademarks of Squiz Pty Ltd
+  Page generated: 19 December 2018 19:43:47
+*/
+
+
+#pagecontent .grad-profile { padding: 8px;
+    background-color: #ddf2f7;
+    border: 1px solid #7ac4d9; }
+    #ie6down #pagecontent .grad-profile, 
+    #ie7 #pagecontent .grad-profile { height: 1%; }
+
+#pagecontent .grad-profile:after { display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    content: ' '; }
+
+#pagecontent .grad-profile .grad-profile-text { margin-right: 195px; }
+
+#pagecontent .grad-profile .grad-profile-text, 
+#pagecontent .grad-profile .grad-profile-text-only {
+    padding: 4px 30px 4px 16px;
+    background: #fff url('https://web.archive.org/web/20181219121227im_/https://www.digital.uwa.edu.au/__data/assets/image/0020/220826/grad-profile-quote-bottom.gif') no-repeat 100% 100%;
+    border: 1px solid #aadbe8;
+    overflow: visible; }
+    #ie6down #pagecontent .grad-profile .grad-profile-text, 
+    #ie6down #pagecontent .grad-profile .grad-profile-text-only,
+    #ie7 #pagecontent .grad-profile .grad-profile-text,
+    #ie7 #pagecontent .grad-profile .grad-profile-text-only { height: 1%; }
+
+#pagecontent .grad-profile .grad-profile-text p,
+#pagecontent .grad-profile .grad-profile-text-only p { margin: 12px 0; }
+
+#pagecontent .grad-profile .grad-profile-text p.introduction,
+#pagecontent .grad-profile .grad-profile-text-only p.introduction  { padding: 0 24px;
+    background-image: url('https://web.archive.org/web/20181219121227im_/https://www.digital.uwa.edu.au/__data/assets/image/0019/220825/testimonial-quote-top.gif');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    color: #0a65a6;
+    font-size: 1.25em; }
+
+#pagecontent .grad-profile .grad-profile-photo { float: right;
+    width: 175px;
+    margin: 0;
+    padding: 0 5px;
+    background-color: #fff;
+    border: 1px solid #aadbe8;
+    text-align: center; }
+    #ie6down #pagecontent .grad-profile .grad-profile-photo { display: inline; }
+
+#pagecontent .grad-profile .grad-profile-photo p { margin: 0;
+    padding: 0.5em 0; }
+
+#bodycontainer #pagecontent .grad-profile .grad-profile-photo img, 
+#bodycontainer #pagecontent .grad-profile .grad-profile-photo img.border { margin: 0;
+    padding: 5px 0 0;
+    border-width: 0; }
+/*
+     FILE ARCHIVED ON 12:12:27 Dec 19, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 23:12:48 Dec 04, 2019.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  exclusion.robots: 0.187
+  load_resource: 116.609
+  exclusion.robots.policy: 0.172
+  LoadShardBlock: 498.136 (3)
+  captures_list: 522.166
+  CDXLines.iter: 14.064 (3)
+  PetaboxLoader3.datanode: 529.495 (4)
+  esindex: 0.013
+  RedisCDXSource: 6.116
+  PetaboxLoader3.resolve: 66.035
+*/
