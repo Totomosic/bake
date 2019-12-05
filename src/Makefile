@@ -1,4 +1,4 @@
-CC = cc -std=c99 -Wall -Werror -pedantic
+CC = cc -Wall -Werror -pedantic
 HEADERS = bakeutils.h
 OBJECTS = bake.o bakeutils.o
 APPLICATION = bake
