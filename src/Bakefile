@@ -1,0 +1,22 @@
+CC = cc -Wall -Werror -pedantic
+HEADERS = bakeutils.h baketypes.h bakeparser.h
+OBJECTS = bake.o bakeutils.o baketypes.o bakeparser.o
+APPLICATION = bake
+
+$(APPLICATION) : $(OBJECTS)
+	$(CC) -o ../$(APPLICATION) $(OBJECTS)
+
+bake.o : bake.c $(HEADERS)
+	$(CC) -c bake.c
+
+bakeutils.o : bakeutils.c $(HEADERS)
+	$(CC) -c bakeutils.c
+
+baketypes.o : baketypes.c $(HEADERS)
+	$(CC) -c baketypes.c
+
+bakeparser.o : bakeparser.c $(HEADERS)
+	$(CC) -c bakeparser.c
+
+clean:
+	rm -f ../$(APPLICATION) $(OBJECTS)

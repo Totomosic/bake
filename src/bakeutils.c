@@ -1,7 +1,8 @@
 #include "bakeutils.h"
 #include <sys/wait.h>
+#include <sys/stat.h>
 
-char** strsplit(const char* str, char delimiter, size_t* outCount)
+char** strsplit(const char* str, char delimiter, char quote, size_t* outCount)
 {
     // Calculate and allocate enough memory to copy the string
     size_t strlength = strlen(str);
@@ -14,10 +15,16 @@ char** strsplit(const char* str, char delimiter, size_t* outCount)
     size_t count = 0;
 
     // Count the number of potential elements in the resulting vector (count number of delimiters that aren't consecutive)
+    bool tokenizing = true;
     char prev = delimiter;
     for (int i = 0; i < strlength; i++)
     {
-        if (buffer[i] == delimiter)
+        if (buffer[i] == quote)
+        {
+            buffer[i] = '\0';
+            tokenizing = !tokenizing;
+        }
+        if (buffer[i] == delimiter && tokenizing)
         {
             // Set all delimiter characters to the null byte
             buffer[i] = '\0';
@@ -94,10 +101,46 @@ void freesplit(char** strsplitresult)
     free(strsplitresult);
 }
 
+char* read_text_file(const char* path, size_t* outSize)
+{
+    struct stat sbuffer;
+    if (stat(path, &sbuffer) == 0)
+    {
+        if (outSize != NULL)
+        {
+            *outSize = sbuffer.st_size;
+        }
+        char* buffer = (char*)malloc(sbuffer.st_size + 1);
+        if (buffer == NULL)
+        {
+            free(buffer);
+        }
+        FILE* file = fopen(path, "r");
+        if (file != NULL)
+        {
+            fread(buffer, sbuffer.st_size, 1, file);
+            fclose(file);
+            buffer[sbuffer.st_size] = '\0';
+            return buffer;
+        }
+    }
+    return NULL;
+}
+
+char* clean_string(char* str, const char* characters)
+{
+    return str;
+}
+
+char* remove_trailing_and_prevailing_characters(char* str, const char* characters)
+{
+    return str;
+}
+
 char** create_argument_list(const char* progname, const char* args)
 {
     size_t count;
-    char** result = strsplit(args, ' ', &count);
+    char** result = strsplit(args, ' ', '"', &count);
     result = (char**)realloc(result, count + 2);
     for (int i = count; i >= 1; i--)
     {
